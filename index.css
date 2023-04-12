@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300&family=PT+Sans&family=Permanent+Marker&family=Poppins:wght@100;600&family=Raleway:wght@100&family=Roboto:wght@100;400;900&display=swap');:root {
+  --yellow: #f9ca24;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+*::selection {
+  background-color: var(--yellow);
+  color: #333;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #222;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+body {
+  color: #111;
+  overflow-x: hidden;
+  padding-left: 35rem;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;
+  background: #040b14;
+  overflow-y: auto;
+}
+
+header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #f9ca24;
+}
+
+header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+
+header .profile h1 a,
+header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+header .profile .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .profile .post {
+  font-size: 2rem;
+  color: #eee;
+}
+
+/* nav */
+.navbar {
+  padding: 30px 0 0 0;
+}
+
+.navbar * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar>ul>li {
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+  text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar.active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar a:hover i,
+.navbar .active i,
+.navbar.active:focus i,
+.navbar li:hover>a i {
+  color: #149ddd;
+}
+
+/* header .navbar{
+  width: 100%;
+}
+header .navbar ul{
+  list-style: none;
+  padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+  display: block;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background: #333;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 5rem;
+  text-decoration: none;
+}
+header .navbar ul li a:hover{
+  background: var(--yellow);
+} */
+
+
+/* menu */
+#menu {
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 1rem 1.5rem;
+  z-index: 1000;
+  display: none;
+}
+
+
+
+/* media queries */
+@media(max-width:1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  .home {
+    padding: 2rem 2rem;
+
+  }
+}
+
+@media(max-width:990px) {
+  header {
+    left: -120%;
+  }
+
+  body {
+    padding: 0;
+  }
+  .project .box-container{
+    width: 100%;
+  }
+}
+
+@media(max-width:400px) {
+  header {
+    width: 100vw;
+
+  }
+
+  .heading {
+    margin: 0 3rem;
+  }
+  .about .row .counter .box{
+    width: 100%;
+  }
+  .education .box-container .box{
+    width: 100%;
+  }
+  .contact .row form{
+    margin: 3rem 0;
+  }
+
+}
+
+
+/* home */
+
+section {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: -4rem 15rem;
+  text-align: justify;
+}
+
+.home h3 {
+  font-size: 2.5rem;
+
+}
+
+.home h1 {
+  font-size: 5rem;
+  text-align: left;
+}
+
+.home h1 span {
+  color: var(--yellow);
+}
+
+.home p {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+
+.buttonabout {
+  padding: 1rem 3rem;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 2rem;
+  border-radius: 5rem;
+  text-decoration: none;
+}
+
+/* .btn i{
+  padding: 0 .5rem;
+  font-size: 1.8rem;
+} */
+.buttonabout:hover {
+  background-color: var(--yellow);
+}
+
+/* about */
+.heading {
+  text-align: center;
+  margin: 0 6rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border-bottom: .1rem solid #222;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.heading span {
+  color: var(--yellow);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.about .row .info {
+  flex: 1 1 48rem;
+  padding: 2rem 1rem;
+  padding-left: 6rem;
+}
+
+.about .row .info h3 {
+  font-size: 2rem;
+  color: var(--yellow);
+  padding: 1rem 0;
+  font-weight: normal;
+  font-weight: 600;
+}
+
+.about .row .info h3 span {
+  color: #111;
+  padding: 0 .5rem;
+}
+
+.about .row .info p {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+/* skills */
+
+.skillname{
+  font-size: 1.6rem;
+
+}
+
+
+/* education */
+
+.education .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  padding-left: 3rem;
+}
+
+.education .box-container .box {
+  width: 27rem;
+  margin: 4rem 1rem;
+  padding-left: 4rem;
+  border-left: .2rem solid #222;
+  position: relative;
+}
+
+.education .box-container .box span {
+  font-size: 1.3rem;
+  background: #111;
+  color: #eee;
+  padding: 0 .5rem;
+  border-radius: 5rem;
+}
+
+.education .box-container .box h3{
+  font-size: 2rem;
+  color: #111;
+  padding-top: 1.5rem;
+}
+.education .box-container .box p{
+  font-size: 1.4rem;
+  color: #111;
+  padding: 1rem 0;
+}
+.education .box-container .box i{
+  position: absolute;
+  top: -1.5rem;
+  left: -2.5rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #111;
+  background: var(--yellow);
+}
+
+/* project */
+.project .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+.project .box-container .card{
+  height: 100%;
+  width: 27%;
+  border-radius: 1rem;
+  margin: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  object-fit: cover;
+}
+.card-title{
+  font-size: 2rem;
+  color: #111;
+  padding: 1.5rem;
+}
+.project .box-container .card:hover{
+  transform: scale(1.2);
+}
+.buttonproject {
+  padding: 0rem 2rem;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  border-radius: 5rem;
+  text-decoration: none;
+}
+.buttonproject:hover {
+  background-color: var(--yellow);
+}
+@media (max-width:400px){
+  .project .box-container .card{
+    width: 100%;
+  
+  }
+}  
+@media (max-width:900px){
+  .project .box-container .card{
+    width: 100%;
+  
+  }
+}  
+  
+
+
+
+
+
+/* contact */
+.contact .row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact .row .content{
+  flex: 1 1 30rem;
+  padding: 4rem;
+  padding-bottom: 0;
+}
+.contact .row form{
+  flex: 1 1 45rem;
+  padding: 2rem;
+  margin: 2rem;
+  margin-bottom: 4rem;
+}
+.contact .row form .box{
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background: #eee;
+  color: #111;
+  text-transform: none;
+  font-size: 1.7rem;
+  width: 100%;
+}
+.contact .row form .box::placeholder{
+  text-transform: capitalize;
+}
+.contact .row form .message{
+  height: 15rem;
+  resize: none;
+}
+.contact .row .content .title{
+  text-transform: uppercase;
+  color: #111;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+.contact .row .content .info   a{
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  font-size: 2rem;
+  color: #111;
+  padding: 1rem 0;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.contact .row .content .info h3 i{
+  padding-right: 1rem;
+  color: var(--yellow);
+}
