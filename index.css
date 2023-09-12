@@ -505,7 +505,7 @@ section {
 .contact .row .content .info   a{
   display: flex;
   align-items: center;
-  text-transform: lowercase;
+  text-transform:none;
   font-size: 2rem;
   color: #111;
   padding: 1rem 0;
